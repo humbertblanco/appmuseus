@@ -2,6 +2,20 @@
 
 An open-source, multilingual audioguide web application for museums and cultural institutions. Built with Laravel, Filament, and Tailwind CSS.
 
+## Screenshots
+
+| Home (Desktop) | Home (Mobile) |
+|:-:|:-:|
+| ![Home](screenshots/01-home.png) | ![Mobile](screenshots/02-home-mobile.png) |
+
+| Exhibition | Piece/Room |
+|:-:|:-:|
+| ![Exhibition](screenshots/03-exhibition.png) | ![Piece](screenshots/04-piece.png) |
+
+| Admin Panel |
+|:-:|
+| ![Admin](screenshots/05-admin-login.png) |
+
 ## Features
 
 - **Multilingual** - Support for Catalan, Spanish, English, and French (easily extensible)
@@ -89,9 +103,10 @@ MUSEUM_INSTITUTION="City Museum"
 # Logo file (place in public/images/)
 MUSEUM_LOGO=images/logo.png
 
-# Primary color for the admin panel
-# Options: Red, Blue, Green, Amber, Purple, Pink, Indigo, Emerald, etc.
-MUSEUM_PRIMARY_COLOR=Blue
+# Primary color theme (affects both frontend and admin panel)
+# Options: red, orange, amber, green, emerald, teal, cyan, sky, blue,
+#          indigo, violet, purple, fuchsia, pink, rose
+MUSEUM_PRIMARY_COLOR=blue
 
 # Default language (ca, es, en, fr)
 MUSEUM_DEFAULT_LOCALE=ca
@@ -153,6 +168,21 @@ routes/
 - **PecaMaterial** - Additional materials (PDFs, videos, links)
 - **Estadistica** - Visitor statistics
 - **Redireccio** - URL redirects
+
+## Docker
+
+```bash
+# Copy and edit your environment
+cp .env.example .env
+# Edit .env with your settings
+
+# Build and run
+docker compose up --build
+```
+
+The app will be available at http://localhost:8000
+
+To use MySQL instead of SQLite, uncomment the `mysql` service in `docker-compose.yml` and update `DB_*` vars in `.env`.
 
 ## Production Deployment
 

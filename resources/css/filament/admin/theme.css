@@ -17,7 +17,7 @@
 
 /* Active tab styling */
 .fi-tabs-item[data-active="true"] .fi-tabs-item-label {
-    color: #b91c1c !important;
+    color: var(--color-primary-700, #1d4ed8) !important;
 }
 
 /* Form field labels */

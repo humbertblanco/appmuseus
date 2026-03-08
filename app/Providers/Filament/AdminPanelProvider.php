@@ -11,6 +11,7 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Widgets;
+use App\Helpers\ColorHelper;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -22,9 +23,6 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        $colorName = config('museum.primary_color', 'Blue');
-        $colorClass = defined(Color::class . '::' . $colorName) ? constant(Color::class . '::' . $colorName) : Color::Blue;
-
         $panel = $panel
             ->default()
             ->id('admin')
@@ -33,7 +31,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandName(config('museum.name', 'Museum Audioguide'))
             ->favicon(asset(config('museum.favicon', 'favicon.ico')))
             ->colors([
-                'primary' => $colorClass,
+                'primary' => ColorHelper::getFilamentColor(),
                 'danger' => Color::Rose,
                 'gray' => Color::Zinc,
                 'info' => Color::Sky,

@@ -18,7 +18,7 @@
     <button
         @click="open = !open"
         type="button"
-        class="flex items-center gap-2 px-3 py-2 text-red-700 hover:text-red-800 hover:bg-red-50 rounded-lg transition"
+        class="flex items-center gap-2 px-3 py-2 text-primary-700 hover:text-primary-800 hover:bg-primary-50 rounded-lg transition"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
@@ -73,7 +73,7 @@
                     @endphp
                     <a
                         href="{{ $url }}"
-                        class="block w-full px-4 py-2.5 text-left text-sm transition-colors {{ ($code === $currentIdioma && !$modeAD) ? 'bg-red-700 text-white font-semibold' : 'text-gray-700 hover:bg-red-50' }}"
+                        class="block w-full px-4 py-2.5 text-left text-sm transition-colors {{ ($code === $currentIdioma && !$modeAD) ? 'bg-primary-700 text-white font-semibold' : 'text-gray-700 hover:bg-primary-50' }}"
                     >
                         {{ $info['nom'] }}
                     </a>
@@ -116,7 +116,7 @@
                         @endphp
                         <a
                             href="{{ $adUrl }}"
-                            class="block w-full px-4 py-2.5 text-left text-sm transition-colors {{ ($code === $currentIdioma && $modeAD) ? 'bg-red-700 text-white font-semibold' : 'text-gray-700 hover:bg-red-50' }}"
+                            class="block w-full px-4 py-2.5 text-left text-sm transition-colors {{ ($code === $currentIdioma && $modeAD) ? 'bg-primary-700 text-white font-semibold' : 'text-gray-700 hover:bg-primary-50' }}"
                         >
                             AD {{ $info['nom'] }}
                         </a>

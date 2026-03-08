@@ -117,7 +117,7 @@
     <div class="flex justify-center mb-4">
         <button
             x-on:click="togglePlay()"
-            class="w-16 h-16 bg-gray-900 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors shadow-lg"
+            class="w-16 h-16 bg-gray-900 hover:bg-primary-700 text-white rounded-full flex items-center justify-center transition-colors shadow-lg"
         >
             <svg x-show="!playing" class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
@@ -190,7 +190,7 @@
     </div>
 
     <!-- Error message -->
-    <div x-show="error" x-cloak class="mt-2 text-center text-sm text-red-600">
+    <div x-show="error" x-cloak class="mt-2 text-center text-sm text-primary-600">
         <span x-text="error"></span>
     </div>
 </div>

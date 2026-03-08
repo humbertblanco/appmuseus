@@ -14,6 +14,9 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    {{-- Dynamic primary color from config/museum.php --}}
+    <style>{!! \App\Helpers\ColorHelper::getCssVariables() !!}</style>
+
     <style>
         [x-cloak] { display: none !important; }
 

@@ -4,7 +4,7 @@
 
 @section('content')
 {{-- Hero Section --}}
-<div class="bg-gradient-to-br from-gray-900 via-gray-800 to-red-900 text-white py-16 md:py-20 lg:py-24 relative overflow-hidden">
+<div class="bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 text-white py-16 md:py-20 lg:py-24 relative overflow-hidden">
     {{-- Decorative pattern --}}
     <div class="absolute inset-0 opacity-5">
         <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
@@ -43,7 +43,7 @@
                 {{-- Stats badges --}}
                 <div class="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
                     <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2.5 lg:px-5 lg:py-3 rounded-full">
-                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
                         <span class="text-sm lg:text-base font-medium">{{ $exposicions->count() }}
@@ -57,7 +57,7 @@
                     </div>
                     <div class="hidden md:block w-px h-6 bg-white/20 self-center"></div>
                     <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2.5 lg:px-5 lg:py-3 rounded-full">
-                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="hidden md:block w-px h-6 bg-white/20 self-center"></div>
                     <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2.5 lg:px-5 lg:py-3 rounded-full">
-                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                         </svg>
                         <span class="text-sm lg:text-base font-medium">4
@@ -95,22 +95,22 @@
                     <div class="absolute inset-6 rounded-full border-2 border-white/5"></div>
                     <div class="absolute inset-12 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center">
                         <div class="text-center">
-                            <svg class="w-20 h-20 mx-auto text-red-400/80 mb-3" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+                            <svg class="w-20 h-20 mx-auto text-primary-400/80 mb-3" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
                             </svg>
                             <div class="flex items-center justify-center gap-1">
-                                <span class="w-1 h-4 bg-red-400/60 rounded-full animate-pulse"></span>
-                                <span class="w-1 h-6 bg-red-400/80 rounded-full animate-pulse" style="animation-delay: 0.1s;"></span>
-                                <span class="w-1 h-8 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></span>
-                                <span class="w-1 h-5 bg-red-400/70 rounded-full animate-pulse" style="animation-delay: 0.3s;"></span>
-                                <span class="w-1 h-7 bg-red-400/90 rounded-full animate-pulse" style="animation-delay: 0.4s;"></span>
-                                <span class="w-1 h-4 bg-red-400/60 rounded-full animate-pulse" style="animation-delay: 0.5s;"></span>
-                                <span class="w-1 h-6 bg-red-400/80 rounded-full animate-pulse" style="animation-delay: 0.6s;"></span>
+                                <span class="w-1 h-4 bg-primary-400/60 rounded-full animate-pulse"></span>
+                                <span class="w-1 h-6 bg-primary-400/80 rounded-full animate-pulse" style="animation-delay: 0.1s;"></span>
+                                <span class="w-1 h-8 bg-primary-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></span>
+                                <span class="w-1 h-5 bg-primary-400/70 rounded-full animate-pulse" style="animation-delay: 0.3s;"></span>
+                                <span class="w-1 h-7 bg-primary-400/90 rounded-full animate-pulse" style="animation-delay: 0.4s;"></span>
+                                <span class="w-1 h-4 bg-primary-400/60 rounded-full animate-pulse" style="animation-delay: 0.5s;"></span>
+                                <span class="w-1 h-6 bg-primary-400/80 rounded-full animate-pulse" style="animation-delay: 0.6s;"></span>
                             </div>
                         </div>
                     </div>
                     {{-- Floating badges --}}
-                    <div class="absolute -top-2 right-8 bg-red-700/80 text-white text-xs px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
+                    <div class="absolute -top-2 right-8 bg-primary-700/80 text-white text-xs px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
                         <span class="flex items-center gap-1">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             CA / ES / EN / FR
@@ -155,7 +155,7 @@
     @else
         {{-- Section header --}}
         <div class="flex items-center gap-4 mb-8">
-            <div class="w-1 h-8 bg-red-700 rounded-full"></div>
+            <div class="w-1 h-8 bg-primary-700 rounded-full"></div>
             <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">
                 @switch($idioma)
                     @case('es') Exposiciones @break

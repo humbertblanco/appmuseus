@@ -1,0 +1,35 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - app-storage:/var/www/html/storage
+      - app-database:/var/www/html/database
+    env_file:
+      - .env
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+    restart: unless-stopped
+
+  # Uncomment to use MySQL instead of SQLite
+  # mysql:
+  #   image: mysql:8.0
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_DATABASE: ${DB_DATABASE:-appmuseus}
+  #     MYSQL_USER: ${DB_USERNAME:-appmuseus}
+  #     MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+  #     MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret}
+  #   volumes:
+  #     - mysql-data:/var/lib/mysql
+  #   restart: unless-stopped
+
+volumes:
+  app-storage:
+  app-database:
+  # mysql-data:

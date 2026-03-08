@@ -24,7 +24,7 @@
     @if($prevPeca)
         <a
             href="{{ route('peca.show', ['idioma' => $idioma, 'exposicio' => $peca->exposicio->slug, 'slug' => $prevPeca->slug]) }}{{ $adParam }}"
-            class="fixed left-4 top-1/2 -translate-y-1/2 z-30 size-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:text-white hover:bg-red-700 transition-colors hidden lg:flex"
+            class="fixed left-4 top-1/2 -translate-y-1/2 z-30 size-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:text-white hover:bg-primary-700 transition-colors hidden lg:flex"
         >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -35,7 +35,7 @@
     @if($nextPeca)
         <a
             href="{{ route('peca.show', ['idioma' => $idioma, 'exposicio' => $peca->exposicio->slug, 'slug' => $nextPeca->slug]) }}{{ $adParam }}"
-            class="fixed right-4 top-1/2 -translate-y-1/2 z-30 size-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:text-white hover:bg-red-700 transition-colors hidden lg:flex"
+            class="fixed right-4 top-1/2 -translate-y-1/2 z-30 size-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:text-white hover:bg-primary-700 transition-colors hidden lg:flex"
         >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -47,7 +47,7 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b border-gray-100">
         <a
             href="{{ route('exposicio.show', ['idioma' => $idioma, 'slug' => $peca->exposicio->slug]) }}{{ $adParam }}"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors"
+            class="inline-flex items-center gap-2 text-gray-700 hover:text-primary-700 transition-colors"
         >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -136,7 +136,7 @@
                     <h2 class="text-base font-medium text-gray-900">
                         @if($reproduintAD)
                             <span class="inline-flex items-center gap-2">
-                                <svg class="w-5 h-5 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
                                 </svg>
                                 @switch($idioma)
@@ -194,7 +194,7 @@
             <div x-data="{ showVideo: false }" class="mt-6">
                 <button
                     @click="showVideo = !showVideo"
-                    class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-red-700 transition-colors"
+                    class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-primary-700 transition-colors"
                 >
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
@@ -274,7 +274,7 @@
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition"
                         >
                             @if($material->tipus === 'pdf')
-                                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                 </svg>
                             @elseif($material->tipus === 'video')
@@ -287,7 +287,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
                             @endif
-                            <span class="text-gray-700 hover:text-red-700">{{ $material->titol }}</span>
+                            <span class="text-gray-700 hover:text-primary-700">{{ $material->titol }}</span>
                         </a>
                     @endforeach
                 </div>
